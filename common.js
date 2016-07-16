@@ -11,14 +11,27 @@ function generateTable(){
 	}
 	if (i === 0 && j != 0){
 		cell.innerText=j;
+		cell.style.backgroundColor='cyan';
+		cell.style.color='blue';
 	}
 	if (i != 0 && j === 0){
 		cell.innerText=i;
+		cell.style.backgroundColor='cyan';
+		cell.style.color='blue';
 	}
+	}
+	}
+	table.rows[0].cells[0].style.backgroundColor='cyan';
+	if (x.value===y.value){
+	for (var i = 1; i < table.rows.length; i++) {
+  		table.rows[i].cells[i].style.backgroundColor = 'pink';
+  		table.rows[i].cells[i].style.color='red';
 	}
 	}
 document.getElementById('whereTable').appendChild(table);
 }
+
+
 document.getElementById('ok').onclick = function (){
 	if (lastX != x.value || lastY != y.value){
 		document.getElementById('whereTable').innerHTML = ('');	
@@ -27,3 +40,6 @@ document.getElementById('ok').onclick = function (){
 	lastY = y.value;
 	
 }
+
+
+	
