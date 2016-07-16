@@ -2,11 +2,19 @@ var lastX, lastY, table = document.createElement('table'), x = document.getEleme
 function generateTable(){
 	var table = document.createElement('table'), row, cell;
     
-	for (j = 0; j < y.value; ++j){
+	for (var j = 0; j <= y.value; ++j){
 		row = table.insertRow();		
-	for (i = 0; i < x.value; ++i) {
+	for (var i = 0; i <= x.value; ++i) {
     	cell = row.insertCell();
-	
+	if (i != 0 || j != 0){
+		cell.innerText=i*j;
+	}
+	if (i === 0 && j != 0){
+		cell.innerText=j;
+	}
+	if (i != 0 && j === 0){
+		cell.innerText=i;
+	}
 	}
 	}
 document.getElementById('whereTable').appendChild(table);
