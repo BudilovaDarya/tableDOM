@@ -22,10 +22,9 @@ function generateTable(){
 	}
 	}
 	table.rows[0].cells[0].style.backgroundColor='cyan';
-	if (x.value===y.value){
 	for (var i = 1; i < table.rows.length; i++) {
   		table.rows[i].cells[i].style.backgroundColor = 'pink';
-  		table.rows[i].cells[i].style.color='red';
+  		table.rows[i].cells[i].style.color = 'red';
 	}
 	}
 document.getElementById('whereTable').appendChild(table);
