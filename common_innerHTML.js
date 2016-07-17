@@ -40,14 +40,15 @@ function generateTable(valx, valy){
 document.getElementById('ok').onclick = function (){
 	if ((lastX != x.value || lastY != y.value) && (x.value <= 25 && y.value <= 25) && (x.value > 0 && y.value > 0)){
 		document.getElementById('whereTable').innerHTML = ('');	
-		generateTable(x.value, y.value);}
-	if(x.value > 25  || y.value > 25){
+		generateTable(x.value, y.value);
+	}
+	else if(x.value > 25  || y.value > 25){
 		alert('Попробуй ввести значение меньше 25 ;)');
 	}
-	if (x.value < 0 || y.value <0) {
+	else if (x.value < 0 || y.value < 0) {
 		alert('Попробуй ввести значение больше 0');
 	}
-	else 		{
+		else 	{
 				document.getElementById('whereTable').innerHTML = ('');	
 				generateTable(10,10);
 			}
