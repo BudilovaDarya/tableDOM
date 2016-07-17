@@ -42,8 +42,10 @@ document.getElementById('ok').onclick = function (){
 	if (x.value < 0 || y.value <0) {
 		alert('Попробуй ввести значение больше 0');
 	}
+	/*else 		{
 				document.getElementById('whereTable').innerHTML = ('');	
 				generateTable(10,10);
+			} Не работает нормально пока что, где-то накосячила*/
 	lastX = x.value;
 	lastY = y.value;
 	
